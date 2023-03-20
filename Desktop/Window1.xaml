@@ -14,14 +14,14 @@
         <WrapPanel Orientation="Vertical"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label Content="Welcome back"   FontSize="32"  Margin="0,0,0,30"></Label>
             <Label Content="Имя пользователя"   FontSize="20"  Margin="0,0,0,0"></Label>
-            <TextBox Height="40" Margin="4,0,0,10" Padding="0,0,0,0" FontSize="16" Foreground="#C6C6C6" BorderThickness="0,0,0,1"></TextBox>
+            <TextBox x:Name="name" Height="40" Margin="4,0,0,10" Padding="0,0,0,0" FontSize="16"  BorderThickness="0,0,0,1"></TextBox>
             <Label Content="Ваша почта"   FontSize="20"  Margin="0,0,0,0"></Label>
-            <TextBox Height="40" Margin="4,0,0,10" Padding="0,0,0,0" FontSize="16" Foreground="#C6C6C6" BorderThickness="0,0,0,1"></TextBox>
+            <TextBox x:Name="mail" Height="40" Margin="4,0,0,10" Padding="0,0,0,0" FontSize="16"  BorderThickness="0,0,0,1"></TextBox>
             <Label Content="Пароль"   FontSize="20"  Margin="0,0,0,0"></Label>
-            <TextBox Height="40" Margin="4,0,0,10" Padding="0,0,0,0" FontSize="16" Foreground="#C6C6C6" BorderThickness="0,0,0,1"></TextBox>
+            <TextBox x:Name="regparol" Height="40" Margin="4,0,0,10" Padding="0,0,0,0" FontSize="16"  BorderThickness="0,0,0,1"></TextBox>
             <Label Content="Повторите пароль"   FontSize="20"  Margin="0,0,0,0"></Label>
-            <TextBox Height="40" Margin="4,0,0,10" Padding="0,0,0,0" FontSize="16" Foreground="#C6C6C6" BorderThickness="0,0,0,1"></TextBox>
-            <Button Content="Зарегистрироваться" Width="327" Height="48" Margin="0,0,0,10" Background="#F96060" FontSize="18" Foreground="White">
+            <TextBox x:Name="regparoltwo" Height="40" Margin="4,0,0,10" Padding="0,0,0,0" FontSize="16"  BorderThickness="0,0,0,1"></TextBox>
+            <Button Content="Зарегистрироваться" Width="327" Height="48" Margin="0,0,0,10" Background="#F96060" FontSize="18" Foreground="White" Click="Button_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -37,6 +37,6 @@
             </Button>
         </WrapPanel>
         <WrapPanel Orientation="Vertical"  Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
-        <Image Height="149" Width="149" Source="/logo.png" Stretch="Fill" Margin="70,70,180,365"/>
+        <Image Height="127" Width="127" Source="/logo.png" Stretch="Fill" Margin="70,70,180,365"/>
     </Grid>
 </Window>

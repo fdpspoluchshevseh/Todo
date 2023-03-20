@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Desktop.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +30,16 @@ namespace Desktop
             Window1 reg = new Window1();
             reg.Show();
             Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (UserRepository.CheckUser(Login.Text, Password.Text))
+            {
+                var MainEmptyWindow = new Main_empty();
+                MainEmptyWindow.Show(); 
+                this.Close();
+            }
         }
     }
 }
