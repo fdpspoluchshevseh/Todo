@@ -19,9 +19,19 @@ namespace Desktop
     /// </summary>
     public partial class Main_empty : Window
     {
-        public Main_empty()
+        private string username;
+        public Main_empty(string _username)
         {
             InitializeComponent();
+            username = _username;
+            Name.Text = username;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var main = new Main(username);
+            main.Show();
+            this.Close();
         }
     }
 }

@@ -7,8 +7,7 @@
         mc:Ignorable="d"
          Title="Window1" Height="600" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>c:\users\43\onedrive\рабочий стол\пп_сайт\todo\desktop\repository\
-
+        <Grid.ColumnDefinitions>
             <ColumnDefinition Width="4*">
             </ColumnDefinition>
             <ColumnDefinition Width="18*">
@@ -22,6 +21,8 @@
                Width="75"
                Height="75">
         </Image>
+        <TextBlock x:Name="Name"
+                   Grid.Column="0" Margin="0,102,0,444"/>
         <Label Content="Добро пожаловать!"
                Grid.Column="1"
                HorizontalAlignment="Left"
@@ -48,7 +49,7 @@
                     Background="#F96060"
                     Foreground="White"
                     Padding="10"
-                    BorderBrush="#F96060">
+                    BorderBrush="#F96060" Click="Button_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>

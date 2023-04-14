@@ -21,9 +21,11 @@ namespace Desktop
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+            
         }
         private void Registracia(object sender, RoutedEventArgs e)
         {
@@ -36,7 +38,7 @@ namespace Desktop
         {
             if (UserRepository.CheckUser(Login.Text, Password.Text))
             {
-                var MainEmptyWindow = new Main_empty();
+                var MainEmptyWindow = new Main_empty(Login.Text);
                 MainEmptyWindow.Show(); 
                 this.Close();
             }

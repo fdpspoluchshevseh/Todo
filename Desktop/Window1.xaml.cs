@@ -50,7 +50,7 @@ namespace Desktop
             else if (UserRepository.CheckEmail(mail.Text))
             {
                 UserRepository.AddUser(name.Text, mail.Text, regparol.Text);
-                var MainEmptyWindow = new Main_empty();
+                var MainEmptyWindow = new Main_empty(name.Text);
                 MainEmptyWindow.Show();
                 MessageBox.Show("Молодец, всё получилось, возьми с полки пирожок ♥");
                 this.Close();
